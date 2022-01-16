@@ -52,9 +52,7 @@ public class GitFolderSearch {
                 set.add(files[index].getParentFile());
             }
             else {
-                int tmp = level;
-                tmp++;
-                this.recurse(files[index].listFiles(), 0, tmp, set);
+                this.recurse(files[index].listFiles(), 0, level + 1, set);
             }
         }
 
