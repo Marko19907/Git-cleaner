@@ -11,6 +11,13 @@ import java.util.Objects;
 public class Utilities {
 
     /**
+     * The program's icon.
+     */
+    private static final Image ICON = new Image(
+            Objects.requireNonNull(Utilities.class.getResourceAsStream("/icon.png"))
+    );
+
+    /**
      * Formats the given size in bytes to a human-readable format, binary unites (1 K = 1,024).
      * @param size The size in bytes to format
      */
@@ -33,7 +40,7 @@ public class Utilities {
      * Returns the program's icon.
      */
     public static Image getIcon() {
-        return new Image(Objects.requireNonNull(Utilities.class.getResourceAsStream("/icon.png")));
+        return ICON;
     }
 
     /**
